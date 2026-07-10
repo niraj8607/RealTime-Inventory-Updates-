@@ -102,7 +102,7 @@ const io = new Server(server, {
   cors: {
     origin: [
       "http://localhost:5173",
-      "https://real-time-inventory-updates.vercel.app",
+      "https://real-time-inventory-updates.vercel.app/api",
     ],
     methods: ["GET", "POST"],
     credentials: true,

@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:5000/api";
+const API = "https://realtime-inventory-updates.onrender.com/api";
 
 export const getInventory = () =>
     axios.get(`${API}/inventory`);
