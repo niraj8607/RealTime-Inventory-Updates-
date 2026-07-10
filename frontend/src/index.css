@@ -1,0 +1,158 @@
+/* Base Reset */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background Wrapper */
+.inventory-wrapper {
+    min-height: 100vh;
+    background-color: #dbeafe; /* Light Blue Background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Main Card */
+.inventory-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 24px;
+    border: 4px solid #2563eb; /* Thick Blue Border */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+
+/* Card Header */
+.card-header {
+    background-color: #2563eb; /* Blue */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.card-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.card-header p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #bfdbfe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.live-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #4ade80;
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+/* Card Body */
+.card-body {
+    padding: 30px;
+}
+
+/* Stock Display Box */
+.stock-display {
+    border: 4px solid;
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stock-display h2 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.stock-number {
+    font-size: 80px;
+    font-weight: 900;
+    line-height: 1;
+}
+
+/* Green (Available State) */
+.available {
+    background-color: #f0fdf4;
+    border-color: #16a34a;
+    color: #16a34a;
+}
+.available h2 { color: #166534; }
+
+/* Red (Out of Stock State) */
+.out-of-stock {
+    background-color: #fef2f2;
+    border-color: #dc2626;
+    color: #dc2626;
+}
+.out-of-stock h2 { color: #991b1b; }
+
+/* Error Message */
+.error-message {
+    margin-top: 20px;
+    background-color: #dc2626;
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(220, 38, 38, 0.3);
+}
+
+/* Purchase Button */
+.purchase-btn {
+    margin-top: 30px;
+    width: 100%;
+    padding: 18px;
+    border-radius: 16px;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+/* Blue Button (Active) */
+.btn-active {
+    background-color: #2563eb;
+    color: white;
+    border-bottom: 8px solid #1e3a8a; /* 3D Effect */
+}
+
+.btn-active:hover {
+    background-color: #3b82f6;
+}
+
+.btn-active:active {
+    border-bottom: 0px;
+    transform: translateY(8px); /* Button push down effect */
+}
+
+/* Gray Button (Disabled/Out of Stock) */
+.btn-disabled {
+    background-color: #e5e7eb;
+    color: #9ca3af;
+    border-bottom: 4px solid #d1d5db;
+    cursor: not-allowed;
+}
